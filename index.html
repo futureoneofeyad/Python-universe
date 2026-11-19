@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PythonVerse | Python is the Best</title>
+  <style>
+    :root{--ink:#243447;--blue:#3776ab;--yellow:#ffd343;--paper:#f6f8fb;--muted:#627282;--white:#fff}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Arial,sans-serif}
+    .wrap{width:min(1100px,calc(100% - 40px));margin:auto}header{background:var(--white);border-bottom:1px solid #dfe6ed}
+    nav{align-items:center;display:flex;height:72px;justify-content:space-between}.brand{color:var(--blue);font-size:1.35rem;font-weight:800;text-decoration:none}.brand span{color:#d39d00}
+    nav a{color:var(--muted);font-size:.9rem;margin-left:24px;text-decoration:none}.button{background:var(--blue);border:0;border-radius:6px;color:#fff;cursor:pointer;font-weight:700;padding:11px 18px;text-decoration:none}
+    .hero{align-items:center;display:grid;gap:55px;grid-template-columns:1.1fr .9fr;padding:80px 0 62px}.eyebrow{color:var(--blue);font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+    h1{color:var(--ink);font-size:clamp(2.7rem,6vw,5rem);line-height:1.03;margin:15px 0}.hero h1 span{color:var(--blue)}.lead{color:var(--muted);font-size:1.08rem;max-width:570px}.hero .button{display:inline-block;margin-top:18px}
+    .code-card{background:#1e293b;border-radius:14px;box-shadow:0 15px 30px #24344722;color:#e2e8f0;padding:24px}.dots{color:#ff6b6b;letter-spacing:5px}.code-card pre{font:15px/1.8 Consolas,monospace;margin:20px 0 0}.keyword{color:#f78c6c}.string{color:#c3e88d}.blue{color:#82aaff}
+    section{padding:42px 0}.heading{align-items:end;display:flex;justify-content:space-between;margin-bottom:20px}h2{font-size:2rem;margin:6px 0}.heading p{color:var(--muted);max-width:430px}.cards{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}.card{background:var(--white);border:1px solid #dfe6ed;border-radius:10px;padding:23px}.card h3{color:var(--blue);margin-top:0}.card p,.muted{color:var(--muted)}
+    .steps{background:#e8eef4}.step-grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}.step strong{color:var(--blue);font-size:1.7rem}.step{background:var(--white);padding:22px}
+    footer{background:var(--ink);color:#c7d1dc;padding:28px 0}footer a{color:var(--yellow);margin-left:18px;text-decoration:none}
+    @media(max-width:750px){nav .links{display:none}.hero{grid-template-columns:1fr;padding-top:50px}.cards,.step-grid{grid-template-columns:1fr}.heading{display:block}}
+  </style>
+</head>
+<body>
+  <header><nav class="wrap"><a class="brand" href="#">Python<span>Verse</span></a><div class="links"><a href="#why">Why Python</a><a href="#learn">Learn</a><a href="#community">Community</a></div><a class="button" href="#why">Explore Python</a></nav></header>
+  <main>
+    <section class="wrap hero"><div><p class="eyebrow">The language for everyone</p><h1>Python is the <span>best</span> programming language.</h1><p class="lead">Readable, powerful, and welcoming. Python helps beginners learn quickly while giving professionals the tools to build the future.</p><a class="button" href="#why">See why it leads</a></div><div class="code-card"><div class="dots">● ● ●</div><pre><span class="keyword">def</span> <span class="blue">build_the_future</span>():<br>    language = <span class="string">"Python"</span><br>    tools = [<span class="string">"AI"</span>, <span class="string">"web"</span>, <span class="string">"data"</span>]<br>    <span class="keyword">return</span> language, tools</pre></div></section>
+    <section class="wrap" id="why"><div class="heading"><div><p class="eyebrow">Why developers choose it</p><h2>One language. Endless possibilities.</h2></div><p>Python combines clarity with a rich ecosystem for the problems that matter most.</p></div><div class="cards"><article class="card"><h3>Artificial intelligence</h3><p>Build machine learning models, data tools, and intelligent applications with Python's leading libraries.</p></article><article class="card"><h3>Easy to learn</h3><p>Clean, readable syntax helps new programmers focus on ideas instead of complicated language rules.</p></article><article class="card"><h3>Everywhere</h3><p>From web development to automation and science, Python is ready for nearly every kind of project.</p></article></div></section>
+    <section class="steps" id="learn"><div class="wrap"><div class="heading"><div><p class="eyebrow">Start your journey</p><h2>From first line to big ideas.</h2></div></div><div class="step-grid"><div class="step"><strong>01</strong><h3>Learn the basics</h3><p class="muted">Understand variables, functions, and the logic behind every program.</p></div><div class="step"><strong>02</strong><h3>Build a project</h3><p class="muted">Turn a small idea into something useful and make learning practical.</p></div><div class="step"><strong>03</strong><h3>Join the community</h3><p class="muted">Share your work, ask questions, and keep growing with other developers.</p></div></div></div></section>
+    <section class="wrap" id="community"><div class="card"><p class="eyebrow">The Python community</p><h2>There is always more to create.</h2><p class="muted">Whether you are writing your first script or building an AI product, Python gives you a clear path from curiosity to creation.</p></div></section>
+  </main>
+  <footer><div class="wrap">PythonVerse · Built for curious developers <a href="https://www.python.org" target="_blank">Official Python ↗</a></div></footer>
+</body>
+</html>
