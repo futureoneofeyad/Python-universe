@@ -1,34 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PythonVerse | Code Without Limits</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PythonVerse — The World's Best Programming Language</title>
   <style>
-    :root{--bg:#08111f;--surface:#111f33;--surface2:#162943;--ink:#f3f7fb;--muted:#9aabc0;--blue:#4bb3fd;--yellow:#ffd343;--green:#62e6a3;--line:#29415d}
-    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:#08111f}::-webkit-scrollbar-thumb{background:linear-gradient(var(--blue),var(--yellow));border-radius:99px}body{background:var(--bg);color:var(--ink);font:16px/1.6 'Segoe UI',system-ui,sans-serif}body:before{background:radial-gradient(circle at 15% 0,#2574a633,transparent 38%);content:"";inset:0;pointer-events:none;position:fixed}.wrap{margin:auto;max-width:1140px;width:calc(100% - 40px)}header{background:#08111fe8;border-bottom:1px solid var(--line);backdrop-filter:blur(15px);position:sticky;top:0;z-index:3}
-    nav{align-items:center;display:flex;height:76px;justify-content:space-between}.brand{color:var(--blue);font-size:1.4rem;font-weight:800;text-decoration:none}.brand span{color:var(--yellow)}.links a{color:var(--muted);font-size:.85rem;margin-left:23px;text-decoration:none;transition:.2s}.links a:hover{color:var(--yellow)}.button{background:var(--blue);border:0;border-radius:8px;box-shadow:0 8px 18px #4bb3fd33;color:#06111e;cursor:pointer;display:inline-block;font-weight:800;padding:11px 18px;text-decoration:none;transition:.25s}.button:hover{background:var(--yellow);box-shadow:0 10px 24px #ffd34344;transform:translateY(-4px)}
-    .hero{align-items:center;display:grid;gap:70px;grid-template-columns:1.05fr .95fr;padding:95px 0 80px}.eyebrow{color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(2.8rem,6vw,5.8rem);letter-spacing:-3px;line-height:1.02;margin:15px 0}.hero h1 span{color:var(--yellow)}.lead{color:var(--muted);font-size:1.06rem;max-width:570px}.hero .button{margin-top:23px}.code-card{background:linear-gradient(145deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 45px #0005;padding:25px;transform:rotate(2deg);transition:.3s}.code-card:hover{box-shadow:0 26px 55px #4bb3fd33;transform:rotate(0) translateY(-8px)}.dots{color:#ff647c;letter-spacing:5px}.code-card pre{font:15px/1.9 Consolas,monospace;margin-top:20px}.keyword{color:#ff8f70}.string{color:#b6ed9e}.blue{color:#8fb9ff}
-    section{padding:55px 0}.heading{align-items:end;display:flex;justify-content:space-between;margin-bottom:25px}.heading p{color:var(--muted);max-width:430px}h2{font-size:2.5rem;line-height:1.1;margin:7px 0}.cards{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}.card{background:linear-gradient(145deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:14px;padding:25px;transition:.3s}.card:hover{border-color:var(--blue);box-shadow:0 16px 30px #0005;transform:translateY(-9px)}.card h3{color:var(--blue);margin-bottom:9px}.card p,.muted{color:var(--muted)}.steps{background:#0d1b2c}.step-grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}.step{border-left:3px solid var(--yellow);padding:8px 20px}.step strong{color:var(--yellow);font-size:1.7rem}
-    .newsletter{background:linear-gradient(135deg,#142c40,#172442);border:1px solid var(--line);border-radius:16px;margin:25px auto 70px;max-width:760px;padding:34px;text-align:center}.newsletter h2{color:var(--yellow)}.newsletter p{color:var(--muted);margin:7px auto 20px}.form{display:flex;gap:10px;justify-content:center}.form input{background:#08111f;border:1px solid var(--line);border-radius:8px;color:#fff;flex:1;min-width:0;padding:12px 15px}.form input:focus{border-color:var(--blue);outline:0}.form button{background:var(--yellow);border:0;border-radius:8px;color:#08111f;font-weight:800;padding:12px 20px}
-    footer{border-top:1px solid var(--line);color:var(--muted);padding:30px 0;text-align:center}footer a{color:var(--blue);margin:0 10px;text-decoration:none}footer a:hover{color:var(--yellow)}
-    @media(max-width:780px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:55px}.code-card{max-width:520px;transform:none}.cards,.step-grid{grid-template-columns:1fr}.heading{display:block}.form{flex-direction:column}.form button{width:100%}}
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(#38bdf8, #facc15); border-radius: 5px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background-color: #0b1120; color: #e2e8f0; line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 35px; background: #0f172a; border-bottom: 2px solid #38bdf8; }
+    .brand { font-size: 1.5rem; font-weight: 800; color: #38bdf8; }
+    .brand span { color: #facc15; }
+    .lang-toggle { background: #38bdf8; color: #0b1120; border: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: transform 0.3s, background 0.3s; }
+    .lang-toggle:hover { background: #facc15; transform: scale(1.05); }
+    .hero { text-align: center; padding: 70px 20px 50px; background: linear-gradient(180deg, #1e293b 0%, #0b1120 100%); }
+    .hero h1 { font-size: 2.8rem; color: #facc15; margin-bottom: 15px; }
+    .hero p { max-width: 650px; margin: 0 auto 30px; color: #94a3b8; font-size: 1.1rem; }
+    .cards-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 20px auto 60px; padding: 0 20px; }
+    .card { background: #1e293b; border-radius: 14px; padding: 25px; flex: 1 1 300px; border-top: 4px solid #38bdf8; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(56, 189, 248, 0.25); border-top-color: #facc15; }
+    .card h3 { color: #38bdf8; margin-bottom: 10px; font-size: 1.3rem; }
+    .newsletter { background: #131d33; border: 1px solid #334155; max-width: 600px; margin: 0 auto 70px; padding: 35px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .newsletter h2 { color: #facc15; margin-bottom: 10px; font-size: 1.8rem; }
+    .newsletter p { color: #94a3b8; margin-bottom: 20px; font-size: 0.95rem; }
+    .news-form { display: flex; gap: 10px; justify-content: center; }
+    .news-form input { padding: 12px 18px; border-radius: 8px; border: 1px solid #475569; background: #0b1120; color: #fff; flex: 1; outline: none; }
+    .news-form input:focus { border-color: #38bdf8; }
+    .news-form button { background: #facc15; color: #0b1120; border: none; padding: 12px 22px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; }
+    .news-form button:hover { background: #38bdf8; transform: translateY(-2px); }
+    footer { background: #070d17; padding: 35px 20px; text-align: center; border-top: 1px solid #1e293b; color: #64748b; font-size: 0.9rem; }
+    footer a { color: #38bdf8; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
+    footer a:hover { color: #facc15; }
   </style>
 </head>
 <body>
-  <header><nav class="wrap"><a class="brand" href="#">Python<span>Verse</span></a><div class="links"><a href="#why">Why Python</a><a href="#learn">Learn</a><a href="#community">Community</a></div><button class="button" id="lang">عربي / EN</button></nav></header>
-  <main>
-    <section class="wrap hero"><div><p class="eyebrow">The language for everyone</p><h1 id="hero-title">Code without <span>limits.</span></h1><p class="lead" id="hero-copy">Readable, powerful, and welcoming. Python helps beginners learn quickly while giving professionals the tools to build the future.</p><a class="button" href="#why" id="hero-button">Explore Python</a></div><div class="code-card"><div class="dots">● ● ●</div><pre><span class="keyword">def</span> <span class="blue">build_the_future</span>():<br>    language = <span class="string">"Python"</span><br>    tools = [<span class="string">"AI"</span>, <span class="string">"web"</span>, <span class="string">"data"</span>]<br>    <span class="keyword">return</span> language, tools</pre></div></section>
-    <section class="wrap" id="why"><div class="heading"><div><p class="eyebrow">Why developers choose it</p><h2 id="why-title">One language. Endless possibilities.</h2></div><p id="why-copy">Python combines clarity with a rich ecosystem for the problems that matter most.</p></div><div class="cards"><article class="card"><h3 id="c1-title">Artificial intelligence</h3><p id="c1-copy">Build machine learning models, data tools, and intelligent applications with Python's leading libraries.</p></article><article class="card"><h3 id="c2-title">Easy to learn</h3><p id="c2-copy">Clean, readable syntax helps new programmers focus on ideas instead of complicated language rules.</p></article><article class="card"><h3 id="c3-title">Everywhere</h3><p id="c3-copy">From web development to automation and science, Python is ready for nearly every kind of project.</p></article></div></section>
-    <section class="steps" id="learn"><div class="wrap"><div class="heading"><div><p class="eyebrow">Start your journey</p><h2>From first line to big ideas.</h2></div></div><div class="step-grid"><div class="step"><strong>01</strong><h3>Learn the basics</h3><p class="muted">Understand variables, functions, and the logic behind every program.</p></div><div class="step"><strong>02</strong><h3>Build a project</h3><p class="muted">Turn a small idea into something useful and make learning practical.</p></div><div class="step"><strong>03</strong><h3>Join the community</h3><p class="muted">Share your work, ask questions, and keep growing with other developers.</p></div></div></div></section>
-    <section class="newsletter"><h2 id="news-title">Stay ahead with Python</h2><p id="news-copy">Get weekly projects, library discoveries, and tutorials in your inbox.</p><form class="form" id="newsletter-form"><input id="email" type="email" required placeholder="Enter your email"><button id="subscribe">Subscribe</button></form></section>
-    <section class="wrap" id="community"><div class="card"><p class="eyebrow">The Python community</p><h2>There is always more to create.</h2><p class="muted">Whether you are writing your first script or building an AI product, Python gives you a clear path from curiosity to creation.</p></div></section>
-  </main>
-  <footer><div class="wrap">PythonVerse · Crafted for curious developers<br><a href="https://www.python.org" target="_blank">Official Python</a><a href="https://pypi.org" target="_blank">PyPI Packages</a><a href="https://docs.python.org" target="_blank">Documentation</a></div></footer>
+  <nav>
+    <div class="brand">Python<span>Verse</span></div>
+    <button class="lang-toggle" onclick="switchLang()" id="btnLang">عربي / EN</button>
+  </nav>
+
+  <section class="hero">
+    <h1 id="heroH1">Why Python Is The Undisputed Best</h1>
+    <p id="heroP">Readable syntax, massive ecosystem, and the engine behind artificial intelligence, data science, and modern automation.</p>
+  </section>
+
+  <section class="cards-container">
+    <div class="card">
+      <h3 id="c1Title">⚡ Artificial Intelligence</h3>
+      <p id="c1Desc">TensorFlow, PyTorch, and NumPy make Python the default language of next-gen machine learning and generative AI.</p>
+    </div>
+    <div class="card">
+      <h3 id="c2Title">🚀 Rapid Prototyping</h3>
+      <p id="c2Desc">Clean English-like syntax empowers developers to build and test software 5x faster than conventional languages.</p>
+    </div>
+    <div class="card">
+      <h3 id="c3Title">🌐 Endless Ecosystem</h3>
+      <p id="c3Desc">Over 500,000+ open-source packages on PyPI to build web apps, automation bots, and data visualizations effortlessly.</p>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2 id="newsH2">Stay Ahead With Python Updates</h2>
+    <p id="newsP">Join our weekly newsletter for curated Python projects, libraries, and tutorials.</p>
+    <form class="news-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+      <input type="email" placeholder="Enter your email..." required id="emailInput">
+      <button type="submit" id="subBtn">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <p id="footP">Crafted with passion for programmers worldwide. Python rules the modern web and AI revolution.</p>
+    <div style="margin-top: 10px;">
+      <a href="https://www.python.org" target="_blank">Official Python</a>
+      <a href="https://pypi.org" target="_blank">PyPI Packages</a>
+      <a href="https://docs.python.org" target="_blank">Documentation</a>
+    </div>
+  </footer>
+
   <script>
-    let arabic=false;
-    const text={en:{title:'Code without limits.',copy:'Readable, powerful, and welcoming. Python helps beginners learn quickly while giving professionals the tools to build the future.',why:'One language. Endless possibilities.',whyCopy:'Python combines clarity with a rich ecosystem for the problems that matter most.',c1:'Artificial intelligence',c1c:"Build machine learning models, data tools, and intelligent applications with Python's leading libraries.",c2:'Easy to learn',c2c:'Clean, readable syntax helps new programmers focus on ideas instead of complicated language rules.',c3:'Everywhere',c3c:'From web development to automation and science, Python is ready for nearly every kind of project.',news:'Stay ahead with Python',newsCopy:'Get weekly projects, library discoveries, and tutorials in your inbox.',subscribe:'Subscribe',placeholder:'Enter your email'},ar:{title:'برمج بلا حدود',copy:'لغة واضحة وقوية ومرحبة بالجميع. تساعد بايثون المبتدئين على التعلم بسرعة وتمنح المحترفين أدوات بناء المستقبل.',why:'لغة واحدة. إمكانيات بلا حدود.',whyCopy:'تجمع بايثون بين الوضوح ومنظومة ضخمة من الأدوات للمشكلات المهمة.',c1:'الذكاء الاصطناعي',c1c:'ابنِ نماذج التعلم الآلي وأدوات البيانات والتطبيقات الذكية باستخدام مكتبات بايثون.',c2:'سهلة التعلم',c2c:'تساعد الصياغة الواضحة المبرمجين الجدد على التركيز على الأفكار بدلاً من القواعد المعقدة.',c3:'في كل مكان',c3c:'من تطوير الويب إلى الأتمتة والعلوم، بايثون جاهزة لكل أنواع المشاريع.',news:'ابقَ على اطلاع مع بايثون',newsCopy:'احصل على مشاريع أسبوعية واكتشافات مكتبات ودروس في بريدك.',subscribe:'اشترك الآن',placeholder:'أدخل بريدك الإلكتروني'}};
-    document.getElementById('lang').addEventListener('click',()=>{arabic=!arabic;const t=arabic?text.ar:text.en;document.body.dir=arabic?'rtl':'ltr';['hero-title','hero-copy','why-title','why-copy','c1-title','c1-copy','c2-title','c2-copy','c3-title','c3-copy','news-title','news-copy','subscribe'].forEach((id,i)=>document.getElementById(id).textContent=[t.title,t.copy,t.why,t.whyCopy,t.c1,t.c1c,t.c2,t.c2c,t.c3,t.c3c,t.news,t.newsCopy,t.subscribe][i]);document.getElementById('email').placeholder=t.placeholder});
-    document.getElementById('newsletter-form').addEventListener('submit',event=>{event.preventDefault();document.getElementById('subscribe').textContent=arabic?'تم الاشتراك!':'Subscribed!';});
+    let arMode = false;
+    function switchLang() {
+      arMode = !arMode;
+      document.body.dir = arMode ? 'rtl' : 'ltr';
+      document.getElementById('heroH1').innerText = arMode ? 'لماذا لغة بايثون هي الأفضل بلا منازع؟' : 'Why Python Is The Undisputed Best';
+      document.getElementById('heroP').innerText = arMode ? 'بساطة القراءة، منظومة برمجية ضخمة، والمحرك الأساسي للذكاء الاصطناعي وعلم البيانات.' : 'Readable syntax, massive ecosystem, and the engine behind artificial intelligence, data science, and modern automation.';
+      document.getElementById('c1Title').innerText = arMode ? '⚡ الذكاء الاصطناعي' : '⚡ Artificial Intelligence';
+      document.getElementById('c1Desc').innerText = arMode ? 'أدوات مثل PyTorch و TensorFlow تجعل بايثون اللغة الأولى عالمياً في تعلم الآلة.' : 'TensorFlow, PyTorch, and NumPy make Python the default language of next-gen machine learning and generative AI.';
+      document.getElementById('c2Title').innerText = arMode ? '🚀 سرعة التطوير والتنفيذ' : '🚀 Rapid Prototyping';
+      document.getElementById('c2Desc').innerText = arMode ? 'صياغة برمجية تشبه اللغة الإنجليزية تتيح للمبرمجين كتابة الأكواد أسرع بخمس مرات.' : 'Clean English-like syntax empowers developers to build and test software 5x faster than conventional languages.';
+      document.getElementById('c3Title').innerText = arMode ? '🌐 مكتبات بلا حدود' : '🌐 Endless Ecosystem';
+      document.getElementById('c3Desc').innerText = arMode ? 'أكثر من 500,000 مكتبة مجانية في مستودع PyPI لبناء تطبيقات الويب والأتمتة بكل سهولة.' : 'Over 500,000+ open-source packages on PyPI to build web apps, automation bots, and data visualizations effortlessly.';
+      document.getElementById('newsH2').innerText = arMode ? 'ابقَ على اطلاع مع نشرة بايثون' : 'Stay Ahead With Python Updates';
+      document.getElementById('newsP').innerText = arMode ? 'انضم إلى نشرتنا البريدية الأسبوعية لأحدث المشاريع والشروحات البرمجية.' : 'Join our weekly newsletter for curated Python projects, libraries, and tutorials.';
+      document.getElementById('emailInput').placeholder = arMode ? 'أدخل بريدك الإلكتروني...' : 'Enter your email...';
+      document.getElementById('subBtn').innerText = arMode ? 'اشترك الآن' : 'Subscribe';
+      document.getElementById('footP').innerText = arMode ? 'صُنع بشغف لجميع المبرمجين حول العالم. بايثون تقود ثورة البرمجة والذكاء الاصطناعي.' : 'Crafted with passion for programmers worldwide. Python rules the modern web and AI revolution.';
+    }
   </script>
 </body>
 </html>
